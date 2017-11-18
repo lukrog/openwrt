@@ -289,11 +289,12 @@ platform_check_image() {
 		return 0
 		;;
 	hc5962|\
+	xiaomi,miwifi-r3|\
 	mir3g|\
 	r6220|\
 	ubnt-erx|\
 	ubnt-erx-sfp)
-		nand_do_platform_check "$board" "$1"
+		nand_do_platform_check "${board//,/_}" "$1"
 		return $?;
 		;;
 	mikrotik,rbm33g|\
@@ -344,6 +345,7 @@ platform_do_upgrade() {
 
 	case "$board" in
 	hc5962|\
+	xiaomi,miwifi-r3|\
 	mir3g|\
 	r6220|\
 	ubnt-erx|\
