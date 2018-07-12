@@ -125,6 +125,14 @@
 	status = "okay";
 };
 
+&gpio2 {
+	status = "okay";
+};
+
+&gpio3 {
+	status = "okay";
+};
+
 &ehci {
 	status = "okay";
 };
@@ -160,7 +168,17 @@
 &pinctrl {
 	state_default: pinctrl0 {
 		gpio {
-			ralink,group = "rgmii1";
+                 	ralink,group = "rgmii1";
+                        ralink,function = "gpio";
+                };
+
+		gpio2 {
+			ralink,group = "rgmii2";
+			ralink,function = "gpio";
+		};
+
+		gpio_spi {
+			ralink,group = "spi";
 			ralink,function = "gpio";
 		};
 
