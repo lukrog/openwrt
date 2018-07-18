@@ -1,0 +1,15 @@
+CONFIG_TARGET_ramips=y
+CONFIG_TARGET_ramips_mt7620=y
+CONFIG_TARGET_ramips_mt7620_DEVICE_xiaomi_miwifi-r3=y
+
+CONFIG_PACKAGE_liblua=y
+CONFIG_PACKAGE_rsyncd=y
+
+CONFIG_PACKAGE_kmod-w1=y
+CONFIG_PACKAGE_kmod-w1-gpio-custom=y
+CONFIG_PACKAGE_kmod-w1-master-gpio=y
+
+
+# SmartEye:
+CONFIG_PACKAGE_loee-SmartEye2=y
+
