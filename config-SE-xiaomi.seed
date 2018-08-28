@@ -9,6 +9,8 @@ CONFIG_PACKAGE_kmod-w1=y
 CONFIG_PACKAGE_kmod-w1-gpio-custom=y
 CONFIG_PACKAGE_kmod-w1-master-gpio=y
 
+CONFIG_PACKAGE_runit=y
+
 
 # SmartEye:
 CONFIG_PACKAGE_loee-SmartEye2=y
