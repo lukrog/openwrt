@@ -14,13 +14,13 @@ find_3g_iface() {
 	local dev=$(uci_get network "$cfg" device)
 
 	if [ "${dev##*/}" = "${tty##*/}" ]; then
-		if [ "$ACTION" = add ]; then
-			available=1
-		else
-			available=0
-		fi
-		proto_set_available "$cfg" $available
-	fi
+                if [ "$ACTION" = add ]; then
+                        available=1
+                elif [ "$ACTION" = remove ]; then
+                        available=0
+                fi
+                [ -n "$available" ] && proto_set_available "$cfg" $available
+        fi
 }
 
 case "$DEVICENAME" in
