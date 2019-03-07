@@ -8,7 +8,7 @@ PKG_RELEASE:=1
 PKG_SOURCE_PROTO:=git
 #PKG_SOURCE:=runit-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=ssh://git@ph.marketlab.pl/diffusion/113/runit.git
-PKG_SOURCE_VERSION:=f0ea165b618418f8b1047a1830fcd67dd3423855
+PKG_SOURCE_VERSION:=cf01a5590157772d885b47747d1df0e15003b192
 #PKG_HASH:=6fd0160cb0cf1207de4e66754b6d39750cff14bb0aa66ab49490992c0c47ba18
 
 include $(INCLUDE_DIR)/package.mk
@@ -36,6 +36,7 @@ define Build/Prepare
 #rm $(PKG_BUILD_DIR)/admin/runit-2.1.2/src/conf-cc
 	echo "$(TARGET_CC) $(TARGET_CFLAGS)" > $(PKG_BUILD_DIR)/src/conf-cc
 	echo "$(TARGET_CC) $(TARGET_LDFLAGS)" > $(PKG_BUILD_DIR)/src/conf-ld
+	sed -i "s/'ar/'$(TARGET_AR)/;s/'ranlib/'$(TARGET_RANLIB)/" $(PKG_BUILD_DIR)/src/print-ar.sh
 #line below prevents removing 'try' executables that determine header config macros. Usefull when working with new OS
 #sed -i '16d' $(PKG_BUILD_DIR)/admin/runit-2.1.2/src/choose.sh
 
