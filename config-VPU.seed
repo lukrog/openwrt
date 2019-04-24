@@ -2,7 +2,6 @@
 CONFIG_TARGET_ar71xx_mikrotik=y
 CONFIG_TARGET_DEVICE_ar71xx_mikrotik_DEVICE_nand-large=y
 CONFIG_PACKAGE_loee-VPU=y
-CONFIG_PACKAGE_runit=y
 
 CONFIG_TARGET_ar71xx=y
 CONFIG_TARGET_DEVICE_PACKAGES_ar71xx_mikrotik_DEVICE_nand-large=""
